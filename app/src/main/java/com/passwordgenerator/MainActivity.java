@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             b2 = c2.isChecked();
             b3 = c3.isChecked();
             length = Integer.parseInt(et.getText().toString());
-            if (length <= 30) {
+            if (length <= 24) {
                 if (b1 && b2 && b3) {
                     while (password.length() < length) {
                         switch (rand.nextInt((3 - 1) + 1) + 1) {
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Please check anyone", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "MAXIMUM 30 CHARACTER", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "MAXIMUM 24 CHARACTER", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
             new AlertDialog.Builder(this).setTitle("Error").setMessage("Don't do that!").create().show();
